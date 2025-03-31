@@ -1,0 +1,432 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Junzhe Shao - Home</title>
+    
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700&display=swap" rel="stylesheet">
+
+    
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.10/dist/katex.min.css" integrity="sha384-wcPF+qM98e9OTdrstMMDUcYEPJrydL+P+bW/A3ChEg6UhuCGDM4XnI+GqCqu+dN$
+    <script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.10/dist/katex.min.js" integrity="sha384-hIoBPJpTUs74ddyc4bFZSMQgGZu/+v1B94NlMGpWPTyWgNscVsMWHIFy/ECQG68$
+    <script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.10/dist/contrib/auto-render.min.js" integrity="sha384-+VBxd3r6XgURPl3dxoRk+u+EFmcvw/Qyq4SO5U5+3GZGfXhPA3M/dpGw/5Xzr0$
+        onload="renderMathInElement(document.body);"></script>
+
+    <style>
+        /* --- General Styling (Minimal Theme based on Image) --- */
+        body {
+            font-family: 'Lato', 'Helvetica', sans-serif;
+            background-color: #ffffff; /* White background */
+            padding-top: 56px; /* Adjust based on navbar height */
+            color: #212529; /* Dark text color */
+            line-height: 1.6;
+        }
+
+        h1, h2, h3 {
+            font-weight: 700;
+            color: #212529; /* Dark headings */
+        }
+
+        a {
+            color: #0d6efd; /* Standard Bootstrap link blue */
+            text-decoration: none;
+            transition: color 0.3s ease;
+        }
+        a:hover {
+            color: #0a58ca;
+            text-decoration: underline;
+        }
+
+        /* --- Navbar (Dark theme like image) --- */
+        /* Using Bootstrap classes navbar-dark bg-dark for base */
+        .navbar {
+             /* Revert background, remove blur/shadow from cosmos */
+             padding-top: 0.5rem; /* Standard Bootstrap padding */
+             padding-bottom: 0.5rem;
+             border-bottom: 1px solid #dee2e6; /* Optional: subtle border like default light */
+        }
+        /* Ensure overrides for dark theme text/links if needed */
+         .navbar-dark .navbar-brand {
+             color: #ffffff;
+         }
+         .navbar-dark .navbar-nav .nav-link {
+             color: rgba(255, 255, 255, 0.75); /* Slightly dimmer white for links */
+         }
+          .navbar-dark .navbar-nav .nav-link:hover,
+          .navbar-dark .navbar-nav .nav-link:focus {
+             color: rgba(255, 255, 255, 0.9);
+         }
+         .navbar-dark .navbar-nav .nav-link.active {
+             color: #ffffff; /* Active link is white */
+         }
+         .navbar-dark .navbar-toggler {
+            border-color: rgba(255, 255, 255, 0.1);
+            /* Ensure toggler icon is white */
+            background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 30'%3e%3cpath stroke='rgba%28255, 255, 255, 1%29' stroke-linecap='round' stroke-miterlimit='10' stroke-width='2' d='M4 7h22M4 15h22M4 23h22'/%3e%3c/svg%3e");
+        }
+         .navbar-dark .navbar-toggler-icon {
+             background-image: none; /* Hide default */
+         }
+
+
+        /* --- Container & Sections --- */
+         .container {
+            max-width: 960px;
+         }
+
+        .hero-section {
+            text-align: center;
+            padding: 40px 0; /* Standard padding */
+             /* Remove animation if not desired in minimal theme */
+             /* opacity: 0; */
+             /* animation: fadeIn 0.8s ease-in-out forwards; */
+             /* animation-delay: 0.1s; */
+        }
+
+        .hero-section img {
+            max-width: 80%;
+            height: auto;
+            display: block;
+            margin: 0 auto;
+            border-radius: 10px;
+            background-color: #eee; /* Light placeholder background */
+            object-fit: cover;
+            border: 1px solid #dee2e6; /* Add subtle border */
+             /* Remove animation if not desired */
+             /* opacity: 0; */
+             /* animation: fadeIn 1.0s ease-in-out forwards; */
+             /* animation-delay: 0.3s; */
+        }
+        .hero-section img:error {
+             /* Placeholder for light theme */
+             content: url('https://placehold.co/600x400/dee2e6/6c757d?text=Image+Not+Found');
+        }
+
+
+        .content-section {
+            /* Revert background, shadow etc */
+            background-color: transparent;
+            padding: 0; /* Remove padding unless needed for spacing */
+            margin: 40px 0;
+            border-radius: 0;
+            box-shadow: none;
+             /* Remove animation if not desired */
+             /* opacity: 0; */
+             /* animation: fadeInUp 0.8s ease-out forwards; */
+             /* animation-delay based on type removed */
+        }
+
+        .content-section h2 {
+            margin-top: 0;
+            margin-bottom: 25px;
+            padding-bottom: 10px;
+            display: inline-block;
+            border-bottom: 1px solid #dee2e6; /* Restore subtle border */
+        }
+
+        .contact-info p {
+            font-size: 1.1rem;
+            color: #212529; /* Dark text */
+        }
+        .contact-info i {
+            margin-right: 10px;
+            color: #0d6efd; /* Match link color */
+        }
+
+        /* --- Ising Model Specific --- */
+        /* Remove styling for formula */
+        /* Remove wrapper class .ising-section if not needed */
+
+        #ising-canvas-container {
+            margin: 40px auto; /* Center container and add vertical margin */
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+        }
+        #ising-canvas {
+             cursor: pointer;
+             border: 1px solid #ced4da; /* Add border for visibility on white */
+             max-width: 100%;
+             height: auto;
+             display: block;
+        }
+         /* Remove temp display style */
+
+
+        /* --- Footer --- */
+        footer {
+            margin-top: 60px;
+            padding: 30px 0;
+            text-align: center;
+            color: #6c757d; /* Standard Bootstrap muted color */
+            border-top: 1px solid #dee2e6; /* Restore top border */
+        }
+
+        /* --- Animations (Optional - Comment out if not needed) --- */
+        /*
+        @keyframes fadeIn {
+            from { opacity: 0; }
+            to { opacity: 1; }
+        }
+
+        @keyframes fadeInUp {
+            from { opacity: 0; transform: translateY(15px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+        */
+
+         /* Ensure KaTeX output matches theme (if KaTeX is still used elsewhere) */
+         .katex {
+            color: #212529 !important; /* Dark text for KaTeX */
+        }
+
+    </style>
+</head>
+<body>
+
+    
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
+        <div class="container-fluid">
+           <div class="container">
+                <a class="navbar-brand" href="index.html">Junzhe Shao</a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarNav">
+                    <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                        <li class="nav-item">
+                            <a class="nav-link active" aria-current="page" href="index.html">Home</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="education.html">Education</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="research.html">Research</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="cv.html">CV</a>
+                        </li>
+                    </ul>
+                    <ul class="navbar-nav ms-auto">
+                        <li class="nav-item">
+                            <a class="nav-link" href="mailto:junzhe_shao@berkeley.edu" aria-label="Email">
+                                <i class="fas fa-envelope fa-lg"></i>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+           </div>
+        </div>
+    </nav>
+
+    <div class="container">
+         <div class="hero-section">
+            <img src="jackson_pollock.jpg"
+                 alt="Abstract artwork suggesting complexity"
+                 onerror="this.onerror=null; this.src='https://placehold.co/600x400/dee2e6/6c757d?text=Image+Not+Found';">
+        </div>
+
+        <div class="content-section">
+            <h2>About Me</h2>
+            <p>
+                I am currently a Ph.D. Candidate in Biostatistics at the University of California, Berkeley, starting September 2023. My research interests lie at the intersection of causal inference, time series analysis, high-dimensional data, and their applications in public health and medicine.
+            </p>
+            <p>
+                Previously, I received my M.S. in Biostatistics from Columbia University and my B.S. in Biological Science with a Minor in Physics from Peking University.
+            </p>
+            <p>
+                Right now, I am interested in causal inference including topics like semi-parametric theory, causal inference in more complicated data structures like interference and time-series, adaptive design and multi-arm bandit. I wish to incorporate statistics physics inspired methods for general causal identification and estimation problems, such as concepts from models like the Ising model shown below.
+            </p>
+        </div>
+
+        
+        <div id="ising-canvas-container">
+             
+             
+        </div>
+
+        <div class="content-section contact-info">
+            <h2>Contact</h2>
+            <p><i class="fas fa-envelope"></i> Email: <a href="mailto:junzhe_shao@berkeley.edu">junzhe_shao@berkeley.edu</a></p>
+        </div>
+    </div>
+
+    <footer>
+        <p>
+            &copy; <span id="current-year"></span> Junzhe Shao
+        </p>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.9.0/p5.min.js"></script>
+    
+    <script>
+        // --- Ising Model Sketch ---
+        let grid;
+        let cols, rows;
+        let resolution = 8;
+        let canvasWidth = 500;
+        let canvasHeight = 500;
+        // let tempDisplay; // Removed as element is deleted
+        let isingCanvas;
+
+        // UPDATED Colors for Minimal Light Theme
+        let colorCold = [0, 0, 0];       // Black
+        let colorHot = [255, 255, 255]; // White
+
+        function setup() {
+            cols = floor(canvasWidth / resolution);
+            rows = floor(canvasHeight / resolution);
+            canvasWidth = cols * resolution;
+            canvasHeight = rows * resolution;
+
+            isingCanvas = createCanvas(canvasWidth, canvasHeight);
+            let container = select('#ising-canvas-container');
+            // Check if container exists before parenting
+            if (container) {
+                 isingCanvas.parent(container);
+            } else {
+                 console.error("Ising canvas container not found!");
+                 return; // Stop setup if container missing
+            }
+            // No need to insert before temp display as it's removed
+
+            isingCanvas.id('ising-canvas'); // Assign ID for styling
+
+            // tempDisplay = select('#ising-temp-display'); // Removed
+
+            grid = make2DArray(cols, rows);
+            for (let i = 0; i < cols; i++) {
+                for (let j = 0; j < rows; j++) {
+                    grid[i][j] = floor(random(2)) * 2 - 1;
+                }
+            }
+            // Keep no stroke, but canvas will have CSS border
+            noStroke();
+            console.log("Ising Model Setup Complete");
+        }
+
+        function draw() {
+            // Check if canvas was created successfully
+            if (!isingCanvas || !grid) return;
+
+            // Optional: Set a background for the canvas itself if needed
+            // background(255); // White canvas background
+
+            let updatesPerFrame = floor(cols * rows / 4);
+            for(let n = 0; n < updatesPerFrame; n++) {
+                metropolisUpdate();
+            }
+
+            // Need to draw background if using stroke for cells
+            // Or ensure rects cover perfectly
+            // Let's add stroke for clarity on white bg
+            stroke(200); // Light grey stroke between cells
+            strokeWeight(0.5);
+
+            for (let i = 0; i < cols; i++) {
+                for (let j = 0; j < rows; j++) {
+                    let x = i * resolution;
+                    let y = j * resolution;
+                    // Use updated minimal colors
+                    if (grid[i][j] === 1) {
+                        fill(colorHot[0], colorHot[1], colorHot[2]); // White
+                    } else {
+                        fill(colorCold[0], colorCold[1], colorCold[2]); // Black
+                    }
+                    rect(x, y, resolution, resolution);
+                }
+            }
+
+             // Temperature calculation logic remains, but display is removed
+             let currentTemp = 0;
+             if (mouseX >= 0 && mouseX <= width && mouseY >= 0 && mouseY <= height) {
+                 currentTemp = map(mouseX, 0, width, 0.1, 5.0);
+                 currentTemp = constrain(currentTemp, 0.1, 5.0);
+             } else {
+                 let clampedMouseX = constrain(mouseX, 0, width);
+                 currentTemp = map(clampedMouseX, 0, width, 0.1, 5.0);
+                 currentTemp = constrain(currentTemp, 0.1, 5.0);
+             }
+
+             // Temp display logic removed
+             // if (tempDisplay) { ... }
+
+        }
+
+        function metropolisUpdate() {
+             if (!isingCanvas || !grid) return; // Check grid exists too
+             let T = 0;
+             let clampedMouseX = constrain(mouseX, 0, width);
+             T = map(clampedMouseX, 0, width, 0.1, 5.0);
+             T = constrain(T, 0.1, 5.0);
+
+            // Ensure cols and rows are valid numbers
+             if (isNaN(cols) || isNaN(rows) || cols <= 0 || rows <= 0) {
+                 console.error("Invalid grid dimensions:", cols, rows);
+                 return;
+             }
+
+            let i = floor(random(cols));
+            let j = floor(random(rows));
+
+            // Ensure grid[i] and grid[i][j] are accessible
+             if (!grid[i] || typeof grid[i][j] === 'undefined') {
+                 console.error("Invalid grid access at:", i, j);
+                 return; // Skip update if indices are bad
+             }
+            let spin = grid[i][j];
+
+            let sumNeighbors = 0;
+            // Add checks for neighbor existence for robustness, though % should handle it
+            sumNeighbors += grid[(i + 1) % cols][j];
+            sumNeighbors += grid[(i - 1 + cols) % cols][j];
+            sumNeighbors += grid[i][(j + 1) % rows];
+            sumNeighbors += grid[i][(j - 1 + rows) % rows];
+            let deltaE = 2 * spin * sumNeighbors;
+
+            if (deltaE < 0 || random(1) < exp(-deltaE / T)) {
+                grid[i][j] *= -1;
+            }
+        }
+
+        function make2DArray(cols, rows) {
+            // Add checks for valid dimensions
+            if (isNaN(cols) || isNaN(rows) || cols <= 0 || rows <= 0) {
+                console.error("Cannot create 2D array with invalid dimensions:", cols, rows);
+                return null; // Return null or empty array
+            }
+            let arr = new Array(cols);
+            for (let i = 0; i < arr.length; i++) {
+                arr[i] = new Array(rows);
+            }
+            return arr;
+        }
+
+        // --- Footer Year Update & KaTeX Render ---
+        document.addEventListener('DOMContentLoaded', (event) => {
+            // Remove KaTeX rendering if formula is gone and not used elsewhere
+            /*
+            try {
+                 renderMathInElement(document.body, { ... });
+            } catch (error) { ... }
+            */
+
+            const yearSpan = document.getElementById('current-year');
+            if(yearSpan) {
+                 yearSpan.textContent = new Date().getFullYear();
+            } else {
+                console.error("Footer year span not found.");
+            }
+        });
+
+    </script>
+
+</body>
+</html>

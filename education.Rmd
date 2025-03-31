@@ -1,0 +1,24 @@
+---
+title: "Education"
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = FALSE, warning=FALSE, message=FALSE)
+```
+
+
+-   **Ph.D. Candidate, Biostatistics**
+    -   University of California, Berkeley
+    -   *Sep 2023 – Present*
+
+-   **M.S., Biostatistics**
+    -   Columbia University, Mailman School of Public Health
+    -   *Sep 2021 – May 2023*
+
+-   **B.S., Biological Science (Minor in Physics)**
+    -   Peking University, School of the Life Sciences
+    -   *Sep 2016 – June 2021*
+
+-   **Visiting Student**
+    -   University of California, San Diego
+    -   *Sep 2019 – Sep 2020*

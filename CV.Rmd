@@ -1,0 +1,16 @@
+---
+title: "Curriculum Vitae"
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = FALSE)
+```
+
+
+Please download my full Curriculum Vitae for detailed information on publications, presentations, experience, and skills.
+
+<br>
+
+[**Download CV (PDF)**](CV_Junzhe_Shao.pdf)
+
+<br>
