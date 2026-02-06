@@ -1,0 +1,22 @@
+---
+title: "Research"
+page-layout: full
+toc: false
+---
+
+## Overview
+
+My work centers on causal inference and adaptive design.
+
+- Causal inference with interference and complex dependence structures.
+- Adaptive clinical trials and multi-arm bandits.
+- Time-series and state-space modeling.
+
+## Publications & manuscripts
+
+1. **Shao, J.**, Wei, W., Wang, J. “*Adaptive A/B Testing under Nonstationary Dynamics using State-Space Models*,” Submitted, 2025.
+2. **Shao, J.**, Gong, A., Shen, J., Wei, W. “*Regularized Frameworks for Flexible and Valid Adaptive Enrichment Designs*,” Under review at *Statistica Sinica*, 2025.
+3. Wei, W.^dagger^, **Shao, J.^dagger^**, Lyu, R. Q., Hemono, R., Ma, X., Wang, J., et al. “*Enhanced language models for predicting and understanding HIV care disengagement: a case study in Tanzania*,” [Preprint](https://pmc.ncbi.nlm.nih.gov/articles/PMC12083686/), forthcoming, *npj Digital Medicine*, 2026.
+4. **Shao, J.**, Yin, M., Cai, X., Valeri, L. “*Generalized Synthetic Control Method with State-space Model*,” short version accepted at [NeurIPS 2022 Workshop for Causality for Real-World Impact](https://openreview.net/pdf?id=OwyiIBIFCrn); Oral Presentation at American Causal Inference Conference (ACIC) 2023; Manuscript in preparation.
+5. Barbehenn, A., Shi, L., **Shao, J.**, et al. “*Rapid Biphasic Decay of Intact and Defective HIV DNA Reservoir During Acute Treated HIV Disease*,” [*Nature Communications*](https://www.nature.com/articles/s41467-024-54116-1), 2024.
+6. Alotaibi, M.^dagger^, **Shao, J.^dagger^**, Pauciulo, M. W., et al. “*Metabolomic Profiles Differentiate Scleroderma-PAH from Idiopathic PAH and Correspond with Worsened Functional Capacity*,” [*Chest*](https://www.sciencedirect.com/science/article/abs/pii/S0012369222037060), 2022.

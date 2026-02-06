@@ -1,0 +1,40 @@
+project:
+  type: website
+  output-dir: _site
+  render:
+    - "*.qmd"
+
+website:
+  title: "Junzhe Shao"
+  navbar:
+    background: light
+    left:
+      - text: "Home"
+        href: index.qmd
+      - text: "Research"
+        href: research.qmd
+      - text: "Education"
+        href: education.qmd
+      - text: "CV"
+        href: cv.qmd
+    right:
+      - icon: envelope
+        aria-label: Email Junzhe
+        href: mailto:junzhe_shao@berkeley.edu
+  page-footer:
+    border: true
+    center: "© {year} Junzhe Shao"
+
+format:
+  html:
+    theme:
+      light: flatly
+    css: styles.css
+    toc: false
+    anchor-sections: false
+    page-layout: full
+    smooth-scroll: true
+    link-external-newwindow: true
+
+resources:
+  - CV_Junzhe.pdf

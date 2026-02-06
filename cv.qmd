@@ -1,0 +1,11 @@
+---
+title: "Curriculum Vitae"
+page-layout: full
+toc: false
+---
+
+Please download my full CV for details on publications, presentations, experience, and skills.
+
+<div class="hero-actions" style="margin-top: 1rem;">
+[Download CV (PDF)](CV_Junzhe.pdf){.btn .primary}
+</div>

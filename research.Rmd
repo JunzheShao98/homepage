@@ -1,0 +1,22 @@
+---
+title: ""
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = FALSE, warning=FALSE, message=FALSE)
+```
+
+## Research Overview
+
+My research focuses on developing and applying statistical methods in biostatistics, with particular interests in causal inference, adaptive clinical trial design, time series analysis for health data, and metabolomics.
+
+
+## Publications & Presentations
+
+*(Full details available in CV)*
+
+1.  **Shao, J.**, Yin, M., Cai, X., Valeri, L. Generalized Synthetic Control Method with State-space Model. *Neurips 2022 Workshop*; *ACIC 2023 (Oral Presentation)*.
+
+2.  Alotaibi, M., **Shao, J.**, Pauciulo, M. W., et al. (2022). Metabolomic Profiles Differentiate Scleroderma-PAH From Idiopathic PAH and Correspond With Worsened Functional Capacity. *Chest*.
+
+3.  Barbehenn, A., Shi, L., **Shao, J.**, et al. Rapid Biphasic Decay of Intact and Defective HIV DNA Reservoir During Acute Treated HIV Disease. *Nature Communication* (forthcoming).
