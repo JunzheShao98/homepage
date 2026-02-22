@@ -5,6 +5,7 @@ cv_pdf: /assets/pdf/CV_Junzhe.pdf # path to your CV PDF file
 email: junzhe_shao@berkeley.edu # your email address
 linkedin_username: junzhe-shao-2517a2195
 github_username: JunzheShao98
+scholar_userid: FGq5XpMAAAAJ
 # rss_icon: true # comment this line to hide the RSS icon
 # wechat_qr: # filename of your wechat qr-code saved as an image (e.g., wechat-qr.png if saved to assets/img/wechat-qr.png)
 # whatsapp_number: # your WhatsApp number (full phone number in international format. Omit any zeroes, brackets, or dashes when adding the phone number in international format.)
