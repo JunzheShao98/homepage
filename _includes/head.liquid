@@ -1,6 +1,16 @@
 <!-- Metadata, OpenGraph and Schema.org -->
 {% include metadata.liquid %}
 
+{% if site.redirect_target %}
+  {% assign redirect_target = site.redirect_target %}
+  <meta http-equiv="refresh" content="0; url={{ redirect_target }}">
+  <meta name="robots" content="noindex">
+  <link rel="canonical" href="{{ redirect_target }}">
+  <script>
+    window.location.replace({{ redirect_target | jsonify }});
+  </script>
+{% endif %}
+
 <!-- Security: Content Security Policy -->
 <!-- Permissive CSP suitable for academic websites. Allows external images, videos, and common embed services. -->
 <!-- To customize for your needs, see: https://developer.mozilla.org/en-US/docs/Web/HTTP/CSP -->
@@ -75,7 +85,14 @@
   <link rel="shortcut icon" href="{{ site.icon | prepend: '/assets/img/' | relative_url | bust_file_cache}}">
 {% endif %}
 <link rel="stylesheet" href="{{ '/assets/css/main.css' | relative_url | bust_css_cache }}">
-<link rel="canonical" href="{{ page.url | replace:'index.html','' | absolute_url }}">
+{% unless site.redirect_target %}
+  {% if site.canonical_url_root %}
+    {% assign canonical_href = page.url | replace:'index.html','' | prepend: site.canonical_url_root %}
+  {% else %}
+    {% assign canonical_href = page.url | replace:'index.html','' | absolute_url %}
+  {% endif %}
+  <link rel="canonical" href="{{ canonical_href }}">
+{% endunless %}
 
 {% if site.enable_darkmode %}
   <!-- Dark Mode -->

@@ -39,8 +39,13 @@
 
 {% assign page_description = page.description | default: site.description | strip_html | normalize_whitespace %}
 {% assign site_description = site.description | strip_html | normalize_whitespace %}
-{% assign canonical_url = page.url | replace: 'index.html', '' | absolute_url %}
-{% assign site_root_url = '/' | absolute_url %}
+{% if site.canonical_url_root %}
+  {% assign canonical_url = page.url | replace: 'index.html', '' | prepend: site.canonical_url_root %}
+  {% assign site_root_url = site.canonical_url_root | append: '/' %}
+{% else %}
+  {% assign canonical_url = page.url | replace: 'index.html', '' | absolute_url %}
+  {% assign site_root_url = '/' | absolute_url %}
+{% endif %}
 {% assign website_id = site_root_url | append: '#website' %}
 {% assign person_id = site_root_url | append: '#person' %}
 {% assign page_id = canonical_url | append: '#webpage' %}
@@ -54,7 +59,11 @@
 {% endif %}
 
 {% if is_home_page %}
-  {% assign document_title = site_title %}
+  {% if page.subtitle %}
+    {% capture document_title %}{{ site_title }} | {{ page.subtitle }}{% endcapture %}
+  {% else %}
+    {% assign document_title = site_title %}
+  {% endif %}
 {% elsif page.url == '/blog/index.html' %}
   {% capture document_title %}{{ page.title }} | {{ site_title }}{% endcapture %}
 {% elsif page.title == null or page.title == '' %}
