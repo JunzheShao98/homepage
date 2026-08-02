@@ -1,0 +1,304 @@
+\documentclass[10pt, letterpaper]{article}
+
+% Packages:
+\usepackage[
+    ignoreheadfoot,
+    top=2 cm,
+    bottom=2 cm,
+    left=2 cm,
+    right=2 cm,
+    footskip=1.0 cm,
+]{geometry}
+\usepackage{titlesec}
+\usepackage{tabularx}
+\usepackage{array}
+\usepackage[dvipsnames]{xcolor}
+\definecolor{primaryColor}{RGB}{0, 0, 0}
+\usepackage{enumitem}
+\usepackage{amsmath}
+\usepackage[
+    pdftitle={Junzhe Shao -- CV},
+    pdfauthor={Junzhe Shao},
+    pdfcreator={LaTeX with RenderCV},
+    colorlinks=true,
+    urlcolor=cyan
+]{hyperref}
+\usepackage{calc}
+\usepackage{bookmark}
+\usepackage{changepage}
+\usepackage{iftex}
+
+% Ensure machine-readable PDF (when using pdfTeX)
+\ifPDFTeX
+    \input{glyphtounicode}
+    \pdfgentounicode=1
+    \usepackage[T1]{fontenc}
+    \usepackage[utf8]{inputenc}
+\fi
+
+\usepackage{charter}
+
+% Settings
+\raggedright
+\pagestyle{empty}
+\setcounter{secnumdepth}{0}
+\setlength{\parindent}{0pt}
+\setlength{\topskip}{0pt}
+\setlength{\columnsep}{0.15cm}
+\pagenumbering{gobble}
+\titleformat{\section}{\bfseries\large}{}{0pt}{}[\vspace{1pt}\titlerule]
+\titlespacing{\section}{-1pt}{0.3 cm}{0.2 cm}
+
+\renewcommand\labelitemi{$\vcenter{\hbox{\small$\bullet$}}$}
+\newenvironment{highlights}{
+    \begin{itemize}[
+        topsep=0.10 cm,
+        parsep=0.10 cm,
+        partopsep=0pt,
+        itemsep=0pt,
+        leftmargin=0 cm + 10pt
+    ]
+}{\end{itemize}}
+
+\newenvironment{onecolentry}{
+    \begin{adjustwidth}{0 cm + 0.00001 cm}{0 cm + 0.00001 cm}
+}{\end{adjustwidth}}
+
+\newenvironment{twocolentry}[2][]{
+    \onecolentry
+    \def\secondColumn{#2}
+    \noindent\begin{minipage}[t]{\dimexpr\linewidth-4.7cm\relax}
+}{
+    \end{minipage}\hfill
+    \begin{minipage}[t]{4.5cm}
+        \raggedleft \secondColumn
+    \end{minipage}
+    \endonecolentry
+}
+
+\newenvironment{header}{
+    \setlength{\topsep}{0pt}\par\kern\topsep\centering\linespread{1.5}
+}{\par\kern\topsep}
+
+% Keep original href behavior
+\let\hrefWithoutArrow\href
+
+\begin{document}
+    % Simple pipe for inline separators
+    \newcommand{\AND}{\unskip\cleaders\copy\ANDbox\hskip\wd\ANDbox\ignorespaces}
+    \newsavebox\ANDbox
+    \sbox\ANDbox{$|$}
+
+    %====================
+    % Header
+    %====================
+    \begin{header}
+        \fontsize{25 pt}{25 pt}\selectfont Junzhe Shao
+
+        \vspace{5 pt}
+
+        \normalsize
+        \mbox{Berkeley, CA}
+        \kern 5.0 pt\AND\kern 5.0 pt
+        \mbox{(+1) 858-766-1048}
+        \kern 5.0 pt\AND\kern 5.0 pt
+        \mbox{\hrefWithoutArrow{mailto:junzhe_shao@berkeley.edu}{junzhe\_shao@berkeley.edu}}
+        \kern 5.0 pt
+        \AND\kern 5.0 pt
+        \mbox{\hrefWithoutArrow{https://junzheshao98.github.io/homepage/}{Website}}
+    \end{header}
+
+    \vspace{5 pt - 0.3 cm}
+
+    %====================
+    % Education
+    %====================
+\section{Education}
+
+    \begin{twocolentry}{Sep 2023 --  2026 (Expected)}
+        \textbf{University of California, Berkeley}\\
+        Ph.D. Candidate in Biostatistics
+    \end{twocolentry}
+
+    \vspace{0.10 cm}
+    \begin{twocolentry}{Sep 2021 -- May 2023}
+        \textbf{Columbia University}\\
+        M.S. in Biostatistics
+    \end{twocolentry}
+
+    \vspace{0.10 cm}
+    \begin{twocolentry}{Sep 2016 -- Jun 2021}
+        \textbf{Peking University}\\
+        B.S. in Biological Science; Minor in Physics
+    \end{twocolentry}
+
+    \vspace{0.10 cm}
+    \begin{twocolentry}{Sep 2019 -- Sep 2020}
+        \textbf{University of California, San Diego}\\
+        Visiting Student
+    \end{twocolentry}
+
+\section{Work Experience}
+
+\begin{twocolentry}{May 2026 -- Present}
+\textbf{Internship, Data Science Research}\\
+ByteDance (TikTok), San Jose, CA
+\end{twocolentry}
+
+\vspace{0.1cm}
+\begin{onecolentry}
+    \begin{highlights}
+        \item Developing cluster-based traffic splitting for recommendation experiments to improve assignment purity and reduce cross-cluster interference.
+        \item Designed a Leiden loss approximating the mean squared error (MSE) objective for cluster randomization, improving the purity-precision Pareto frontier on billion-user-scale data.
+        \item Developing covariate-adjustment methods for cluster-randomized experiments, drafting technical documentation, and supporting partner teams with methodology design.
+    \end{highlights}
+\end{onecolentry}
+
+\vspace{0.20 cm}
+
+\begin{twocolentry}{Jun 2025 -- May 2026}
+\textbf{Internship, Product Development Data Science}\\
+Genentech, South San Francisco, CA
+\end{twocolentry}
+    
+\vspace{0.1cm}
+\begin{onecolentry}
+    \begin{highlights}
+        \item Developed a bias-corrected Augmented Inverse Probability Weighting (AIPW) estimator for longitudinal external-control studies, leveraging double machine learning and semiparametric efficiency theory to improve causal effect estimation.
+        \item Built reproducible R simulation pipelines to benchmark performance and drafted the  methods manuscript.
+        \item Applied and validated on real clinical-trial data, delivering study-ready analyses.
+    \end{highlights}
+\end{onecolentry}
+
+\vspace{0.10 cm}
+
+%====================
+\section{Research Experience}
+
+\begin{twocolentry}{May 2025-Present}
+    \textbf{Bias Corrected AIPW Estimator for External Control in Longitudinal RCTs}\\
+\end{twocolentry}
+\vspace{0.05 cm}
+\begin{onecolentry}
+    \begin{highlights}
+        \item Developed a bias-corrected augmented inverse probability weighting (AIPW) estimator that leverages external control arms with longitudinal data.  
+        \item Established bias correction at a rate governed by the number of time points, ensuring valid type I error control compared to naive direct pooling approaches. Provided non-asymptotic guarantees.
+        \item Demonstrated higher statistical power compared to RCT-only estimators and other covariates adjustment methods.
+    \end{highlights}
+\end{onecolentry}
+\vspace{0.10 cm}
+\begin{twocolentry}{May 2025-Jan 2026}
+    \textbf{Nonstationary Adaptive A/B Testing with State-space Models}\\
+\end{twocolentry}
+\vspace{0.05 cm}
+\begin{onecolentry}
+    \begin{highlights}
+        \item Proposed a state-space modeling framework for adaptive AB testing in nonstationary environments with evolving treatment effects.
+        \item Developed a Neyman-style optimal allocation policy via Kalman filtering and established asymptotic variance bounds for  ATE estimator and provide anytime valid confidence interval.
+    \end{highlights}
+\end{onecolentry}
+\vspace{0.10 cm}
+   \begin{twocolentry}{Jun 2023 -- Dec 2025}
+        \textbf{Regularized Frameworks for  Adaptive Enrichment Designs}\\
+    \end{twocolentry}
+    \vspace{0.05 cm}
+    \begin{onecolentry}
+        \begin{highlights}
+            \item Proposed a unified adaptive enrichment framework to maximize power for testing average treatment effects.
+            \item Cast the problem as constrained optimization to unify different objectives.
+            \item Calibrated selection bias and provided valid inference throughout the process.
+        \end{highlights}
+    \end{onecolentry}
+
+\vspace{0.10 cm}
+\begin{twocolentry}{Dec 2024 -- April 2025}
+    \textbf{Enhanced Large Language Model for Predicting HIV Care Disengagement }\\
+\end{twocolentry}
+\vspace{0.05 cm}
+\begin{onecolentry}
+    \begin{highlights}
+        \item Fine-tuned LLaMA 3.1 with over 4.8 million EMR records from Tanzania to predict disengagement from HIV care, ART non-adherence, and adverse outcomes.  
+        \item Demonstrated superior predictive performance compared to supervised ML models and zero-shot LLMs, with strong internal and external validation results.  
+        \item Provided clinically interpretable insights; expert evaluation confirmed the model's reasoning was clinically relevant in over 90\% of aligned cases.  
+    \end{highlights}
+\end{onecolentry}
+\vspace{0.10 cm}
+
+    \begin{twocolentry}{Nov 2021 -- Present}
+        \textbf{Causal Inference for Non-Stationary Time Series Data}\\
+    \end{twocolentry}
+    \vspace{0.05 cm}
+    \begin{onecolentry}
+        \begin{highlights}
+            \item Proposed a parametric generalization of synthetic control with time-varying, non-permutation-invariant weights.
+            \item Applied the approach to study the impact of a mandatory certificate on COVID-19 vaccine compliance.
+            \item Developing the R package \href{https://junzheshao5959.github.io/SSMimpute/}{\texttt{SSMimpute}} for state-space-model multiple imputation in non-stationary multivariate time series.
+        \end{highlights}
+    \end{onecolentry}
+
+    \vspace{0.10 cm}
+    \begin{twocolentry}{Jun 2022 -- Present}
+        \textbf{Adaptive Design for Randomized Trials under High-dimensional Setting}\\
+    \end{twocolentry}
+    \vspace{0.05 cm}
+    \begin{onecolentry}
+        \begin{highlights}
+            \item Investigated theoretical properties of covariate-balancing methods for randomized clinical trials under many covariates.
+            \item Proved that a balancing criterion can be achieved asymptotically when the number of covariates is a vanishing proportion of the number of patients.
+        \end{highlights}
+    \end{onecolentry}
+
+\vspace{0.10 cm}
+
+\section{Publications \& Manuscripts in Preparation}
+\begin{onecolentry}
+    \textbf{Junzhe Shao}, Xiaoxuan Cai, Linda Valeri. ``\textit{Synthetic Control as Missing Data: A Unified State-Space Approach}'', Preparing for submission.
+\end{onecolentry}
+\vspace{0.20 cm}
+
+\begin{onecolentry}
+    \textbf{Junzhe Shao}, Jiawen Zhu, Herbert Pang. ``\textit{Leveraging Longitudinal Data in Designing Hybrid RCT with the Incorporation of Real-World Data}'', Submitted to \textit{Biostatistics}, 2026.
+\end{onecolentry}
+\vspace{0.20 cm}
+
+\begin{onecolentry}
+    \textbf{Junzhe Shao}, Waverley Wei, Jingshen Wang. ``\textit{Adaptive A/B Testing under Nonstationary Dynamics using State-Space Models}'',  \href{https://virtual.aistats.org/virtual/2026/poster/10811}{\textit{International Conference on Artificial Intelligence and Statistics (AISTATS)}}, 2026.
+\end{onecolentry}
+\vspace{0.20 cm}
+\begin{onecolentry}
+    \textbf{Junzhe Shao}, Aibo Gong, Juan Shen, Waverley Wei. ``\textit{A Unified Adaptive Enrichment Design for Power Enhancement}'', Major Revision at \textit{Statistica Sinica}, 2025.
+\end{onecolentry}
+\vspace{0.20 cm}
+
+\begin{onecolentry}
+    Waverly Wei$^\dagger$, \textbf{Junzhe Shao}$^\dagger$, Rita Qiuran Lyu, Rebecca Hemono, Xinwei Ma et al. ``\textit{Enhanced language models for predicting and understanding HIV care disengagement: a case study in Tanzania}'', \href{https://www.nature.com/articles/s41746-026-02349-3}{\textit{npj Digital Medicine}}, 2026.
+\end{onecolentry}
+\vspace{0.20 cm}
+\begin{onecolentry}
+\textbf{Junzhe Shao}, Mingzhang Yin, Xiaoxuan Cai, Linda Valeri. ``\textit{Generalized Synthetic Control Method with State-space Model}'', short version accepted at \href{https://openreview.net/pdf?id=OwyiIBIFCrn}{NeurIPS 2022 Workshop for Causality for realworld impact}. Oral Presentation at American Causal Inference Conference (ACIC) 2023, Manuscript in preparation.
+\end{onecolentry}
+
+\vspace{0.20 cm}
+\begin{onecolentry}
+Alton Barbehenn, Lei Shi, \textbf{Junzhe Shao}, et al. ``\textit{Rapid Biphasic Decay of Intact and Defective HIV DNA Reservoir During Acute Treated HIV Disease}'', \href{https://www.nature.com/articles/s41467-024-54116-1}{\textit{Nature Communications}}, 2024.
+\end{onecolentry}
+\vspace{0.20 cm}
+
+\begin{onecolentry}
+Mona Alotaibi$^\dagger$, \textbf{Junzhe Shao}$^\dagger$, Michael W. Pauciulo, et al. ``\textit{Metabolomic Profiles Differentiate Scleroderma-PAH from Idiopathic PAH and Correspond with worsened Functional Capacity}'', \href{https://www.sciencedirect.com/science/article/abs/pii/S0012369222037060}{\textit{Chest}}, 2022.
+\end{onecolentry}
+
+\vspace{0.30 cm}
+
+\begin{onecolentry}\footnotesize
+$^\dagger$\,Co-first authors.
+\end{onecolentry}
+
+\section{Skills Summary}
+    \begin{onecolentry}
+        \textbf{Programming:} R, Python, SQL\\
+        \textbf{Software/Tools:} Spark, Ray, Hadoop, Hive, \LaTeX, Git, Bash, Slurm\\
+        \textbf{Languages:} Mandarin (Native), English (Proficient)
+    \end{onecolentry}
+
+\end{document}
